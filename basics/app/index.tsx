@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Text, View } from "react-native";
 import Details from "../components/Details";
 
@@ -13,14 +13,20 @@ function fruit() {
 
 // Define the Index component
 export default function Index() {
-  const name = "PG";
+  // const name = "PG";
+  const [name, setName] = useState("Bruno");
   return (
+    // <View>
+    //   <Text>{name}</Text>
+    //   <Button title={`${age}`} onPress={() => {}} />
+    //   <Text>{email}</Text>
+    //   <Text>{fruit()}</Text>
+    //   <Details />
+    // </View>
+
     <View>
-      <Text>{name}</Text>
-      <Button title={`${age}`} onPress={() => {}} />
-      <Text>{email}</Text>
-      <Text>{fruit()}</Text>
-      <Details />
+      <Details name={name} />
+      <Button title="press" onPress={() => setName("hello")} />
     </View>
   );
 }

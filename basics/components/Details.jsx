@@ -5,12 +5,12 @@ const fruit = () => {
   console.warn("FUNCTION CALLED");
 };
 
-const Details = () => {
-  const [color, setColor] = useState(true);
+const Details = (props) => {
+  // const [color, setColor] = useState(true);
 
   return (
     <View>
-      <Text style={{ fontSize: 20 }}>NAME : PG</Text>
+      {/* <Text style={{ fontSize: 20 }}>NAME : PG</Text>
       <Text style={{ fontSize: 20 }}>AGE : 20</Text>
       <Text style={{ fontSize: 20 }}>CLG : GGGITS</Text>
       <Button title="Press it" onPress={() => fruit()} />
@@ -19,7 +19,8 @@ const Details = () => {
         title="delete"
         color={color ? "red" : "green"}
         onPress={() => setColor(!color)}
-      />
+      /> */}
+      <Text>{props.name}</Text>
     </View>
   );
 };
