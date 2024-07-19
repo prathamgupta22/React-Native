@@ -1,11 +1,12 @@
 import React from "react";
 import { View } from "react-native";
-import Toggle from "../components/Toggle";
+import Radio from "../components/Radio";
+import { SafeAreaView } from "react-native-safe-area-context";
 const Index = () => {
   return (
-    <View>
-      <Toggle />
-    </View>
+    <SafeAreaView>
+      <Radio />
+    </SafeAreaView>
   );
 };
 
